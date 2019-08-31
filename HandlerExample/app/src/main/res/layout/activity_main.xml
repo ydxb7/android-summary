@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv_ui_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tv_ui_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/light_blue"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/black"
+        android:text="start UI thread +1/s"
+        android:padding="4dp"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/tv_background_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:layout_marginStart="100dp"
+        android:layout_below="@id/tv_ui_number"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tv_background_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/light_blue"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/black"
+        android:layout_below="@id/tv_ui_number"
+        android:text="start Background thread +1/2s"
+        android:padding="4dp"
+        android:textSize="15sp" />
+
+
+</RelativeLayout>
