@@ -84,12 +84,14 @@ public class MainActivity extends AppCompatActivity {
                     Log.d(TAG, "onClick: ui thread start to count.");
                     mUiCount.setText("stop UI thread +1/s");
 
+                    // TODO example 1: start to count
                     // start to count every second
                     uiHandler.postDelayed(mainThreadRunner, 1000);
                 } else {
                     Log.d(TAG, "onClick: stop ui thread");
                     mUiCount.setText("start UI thread +1/s");
 
+                    // TODO example 1: stop to count
                     uiHandler.removeCallbacks(mainThreadRunner);
                     // remove all runnable posted on this handler.
                     uiHandler.removeCallbacksAndMessages(null);
@@ -104,9 +106,11 @@ public class MainActivity extends AppCompatActivity {
                     mBackgroundCount.setText("stop Background thread +1/2s");
 
                     Log.d(TAG, "onClick: background thread start to count.");
+                    // TODO example 2: start to count
                     backgroundHandler.postDelayed(backgroundThreadRunner, 2000);
                 } else {
                     mBackgroundCount.setText("start Background thread +1/2s");
+                    // TODO example 2: stop to count
                     backgroundHandler.removeCallbacks(backgroundThreadRunner);
                 }
 
