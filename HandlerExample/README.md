@@ -9,24 +9,24 @@ subclass should override the <code>run</code> method of class
 allocated and started. For example, a thread that computes primes
 larger than a stated value could be written as follows:
 
-<blockquote><pre>
-    class PrimeThread extends Thread {
-        long minPrime;
-        PrimeThread(long minPrime) {
-            this.minPrime = minPrime;
-        }
-        public void run() {
-            // compute primes larger than minPrime
-            &nbsp;.&nbsp;.&nbsp;.
-        }
+```
+class PrimeThread extends Thread {
+    long minPrime;
+    PrimeThread(long minPrime) {
+        this.minPrime = minPrime;
     }
-</pre></blockquote>
-<p>
+    public void run() {
+        // compute primes larger than minPrime
+    }
+}
+```
+
 The following code would then create a thread and start it running:
-<blockquote><pre>
-    PrimeThread p = new PrimeThread(143);
-    p.start();
-</pre></blockquote>
+
+```
+PrimeThread p = new PrimeThread(143);
+p.start();
+```
 <p><hr>
 The other way to create a thread is to declare a class that
 implements the <code>Runnable</code> interface. That class then
@@ -34,24 +34,26 @@ implements the <code>run</code> method. An instance of the class can
 then be allocated, passed as an argument when creating
 <code>Thread</code>, and started. The same example in this other
 style looks like the following:
-<blockquote><pre>
-    class PrimeRun implements Runnable {
-        long minPrime;
-        PrimeRun(long minPrime) {
-            this.minPrime = minPrime;
-        }
-        public void run() {
-            // compute primes larger than minPrime
-            &nbsp;.&nbsp;.&nbsp;.
-        }
+
+```
+class PrimeRun implements Runnable {
+    long minPrime;
+    PrimeRun(long minPrime) {
+        this.minPrime = minPrime;
     }
-</pre></blockquote>
-<p>
+    public void run() {
+        // compute primes larger than minPrime
+        &nbsp;.&nbsp;.&nbsp;.
+    }
+}
+```
+
 The following code would then create a thread and start it running:
-<blockquote><pre>
-    PrimeRun p = new PrimeRun(143);
-    new Thread(p).start();
-</pre></blockquote>
+
+```
+PrimeRun p = new PrimeRun(143);
+new Thread(p).start();
+```
 
 ### Lifecycle
 ![lifecycle](lifecycle.png)
@@ -278,3 +280,56 @@ class LooperThread extends Thread {
 
 `Looper.myLooper()`获取当前线程绑定的`Looper`，如果没有返回`null`。`Looper.getMainLooper()`返回主线程的`Looper`,这样就可以方便的与主线程通信。注意：在`Thread`的构造函数中调用`Looper.myLooper`只会得到主线程的`Looper`，因为此时新线程还未构造好
 
+##AsyncTask
+AsyncTask是谷歌对Thread和Handler的进一步封装，完全隐藏起了这两个概念，而用doInBackground(Params... params)取而代之。但需要注意的是AsyncTask的效率不是很高而且资源代价也比较重，只有当进行一些小型操作时为了方便起见使用。这一点在官方文档写的很清楚:
+
+AsyncTask is designed to be a helper class around Thread and Handler and does not constitute a generic threading framework. AsyncTasks should ideally be used for short operations (a few seconds at the most.) If you need to keep threads running for long periods of time, it is highly recommended you use the various APIs provided by the java.util.concurrent package such as Executor, ThreadPoolExecutor and FutureTask.
+
+## HandlerThread
+Handy class for starting a new thread that has a looper. The looper can then be used to create handler classes. Note that `start()` must still be called.
+
+An easy version of HandlerThread:
+
+```
+public class MyHandlerThread extends Thread {
+    private static final String TAG = "MyHandlerThread";
+
+    int mPriority;
+    Looper mLooper;
+
+    public MyHandlerThread(String name) {
+        super(name);
+        mPriority = Process.THREAD_PRIORITY_DEFAULT;
+    }
+
+    @Override
+    public void run() {
+        Log.d(TAG, "run...");
+        Looper.prepare();
+        synchronized (this) {
+            mLooper = Looper.myLooper();
+            notifyAll();
+        }
+        Process.setThreadPriority(mPriority);
+        Looper.loop();
+    }
+
+    public Looper getLooper() {
+        if (!isAlive()) {
+            return null;
+        }
+
+        // If the thread has been started, wait until the looper has been created.
+        synchronized (this) {
+            while (isAlive() && mLooper == null) {
+                try {
+                    wait();
+                } catch (InterruptedException e) {
+                    Log.d(TAG, "getLooper: e = " + e.getMessage());
+                }
+            }
+        }
+        return mLooper;
+    }
+}
+```
