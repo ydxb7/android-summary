@@ -211,3 +211,38 @@ static class MyThread extends Thread {
     }
 }
 ```
+[Android进阶——多线程系列之Thread、Runnable、Callable、Future、FutureTask](https://blog.csdn.net/qq_30379689/article/details/53819815)
+
+[Android进阶——多线程系列之四大线程池的使用介绍](https://blog.csdn.net/qq_30379689/article/details/53522085)
+
+## Handler
+A Handler allows you to send and process <code>Message</code> and <code>Runnable</code>
+objects associated with a thread's MessageQueue.  **Each Handler
+instance is associated with a single thread and that thread's message
+queue.**  When you create a new Handler, it is bound to the thread /
+message queue of the thread that is creating it -- from that point on,
+it will deliver messages and runnables to that message queue and execute
+them as they come out of the message queue.
+
+<p>There are two main uses for a Handler: (1) to schedule messages and
+runnables to be executed as some point in the future; and (2) to enqueue
+an action to be performed on a different thread than your own.
+
+<p>Scheduling messages is accomplished with the
+<code>post</code>, <code>postAtTime(Runnable, long)</code>,
+<code>postDelayed</code>, <code>sendEmptyMessage</code>,
+<code>sendMessage</code>, <code>sendMessageAtTime</code>, and
+<code>sendMessageDelayed</code> methods.  The <em>post</em> versions allow
+you to enqueue Runnable objects to be called by the message queue when
+they are received; the <em>sendMessage</em> versions allow you to enqueue
+a <code>Message</code> object containing a bundle of data that will be
+processed by the Handler's <code>handleMessage</code> method (requiring that
+you implement a subclass of Handler).
+
+<p>When posting or sending to a Handler, you can either
+allow the item to be processed as soon as the message queue is ready
+to do so, or specify a delay before it gets processed or absolute time for
+it to be processed.  The latter two allow you to implement timeouts,
+ticks, and other timing-based behavior.
+Handler是Android中引入的一种让开发者参与处理线程中消息循环的机制。每个Hanlder都关联了一个线程，每个线程内部都维护了一个消息队列MessageQueue，这样Handler实际上也就关联了一个消息队列。可以通过Handler将Message和Runnable对象发送到该Handler所关联线程的MessageQueue（消息队列）中，然后该消息队列一直在循环拿出一个Message，对其进行处理，处理完之后拿出下一个Message，继续进行处理，周而复始。当创建一个Handler的时候，该Handler就绑定了当前创建Hanlder的线程。从这时起，该Hanlder就可以发送Message和Runnable对象到该Handler对应的消息队列中，当从MessageQueue取出某个Message时，会让Handler对其进行处理。
+
