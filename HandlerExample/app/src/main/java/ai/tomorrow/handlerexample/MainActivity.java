@@ -3,6 +3,7 @@ package ai.tomorrow.handlerexample;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.HandlerThread;
+import android.os.Message;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
@@ -14,14 +15,14 @@ public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";
 
     private TextView mUiNumber;
-    private TextView mUiCount;
     private TextView mBackgroundNumber;
-    private TextView mBackgroundCount;
+    private TextView mMyHandlerThreadNumber;
 
     private int uiCount = 0;
     private int backgroundCount = 0;
+    private int myHandlerThreadCount = 0;
 
-    // TODO example 1: ui thread -> add 1/3sec
+    // TODO example 1: ui thread -> add 1/sec
     // ui thread
     private Handler uiHandler;
 
@@ -36,10 +37,10 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
-    // TODO example 2: background thread -> add 1/4sec
+    // TODO example 2: background thread -> add 1/2sec
     // background thread
     private Handler backgroundHandler;
-    private HandlerThread handlerThread = new HandlerThread("background_thread_xx");
+    private HandlerThread handlerThread;
 
     private Runnable backgroundThreadRunner = new Runnable() {
         @Override
@@ -60,73 +61,65 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
+    // TODO example 3: MyHandlerThread -> add 1/3sec
+    private MyHandlerThread myHandlerThread;
+    private Handler myHandler;
+    private Runnable myHandlerThreadRunner = new Runnable() {
+        @Override
+        public void run() {
+            Log.d("TAG", "myHandlerThreadRunner, thread name: " + Thread.currentThread().getName());
+
+            myHandler.postDelayed(myHandlerThreadRunner, 3000);
+
+            uiHandler.post(new Runnable() {
+                @Override
+                public void run() {
+                    myHandlerThreadCount++;
+                    mMyHandlerThreadNumber.setText(String.valueOf(myHandlerThreadCount));
+                }
+            });
+        }
+    };
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         mUiNumber = findViewById(R.id.tv_ui_number);
-        mUiCount = findViewById(R.id.tv_ui_count);
         mBackgroundNumber = findViewById(R.id.tv_background_number);
-        mBackgroundCount = findViewById(R.id.tv_background_count);
+        mMyHandlerThreadNumber = findViewById(R.id.tv_MyHandlerThread_number);
 
+        // TODO example 1: ui
         // Main/ui thread no need to start
         uiHandler = new Handler();
+        uiHandler.postDelayed(mainThreadRunner, 1000);
 
+        // TODO example 2: background HandlerThread
         // start a background thread.
+        handlerThread = new HandlerThread("background_thread");
         handlerThread.start();
         backgroundHandler = new Handler(handlerThread.getLooper());
+        backgroundHandler.postDelayed(backgroundThreadRunner, 2000);
 
-        mUiCount.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (mUiCount.getText().equals("start UI thread +1/s")) {
-                    Log.d(TAG, "onClick: ui thread start to count.");
-                    mUiCount.setText("stop UI thread +1/s");
-
-                    // TODO example 1: start to count
-                    // start to count every second
-                    uiHandler.postDelayed(mainThreadRunner, 1000);
-                } else {
-                    Log.d(TAG, "onClick: stop ui thread");
-                    mUiCount.setText("start UI thread +1/s");
-
-                    // TODO example 1: stop to count
-                    uiHandler.removeCallbacks(mainThreadRunner);
-                    // remove all runnable posted on this handler.
-                    uiHandler.removeCallbacksAndMessages(null);
-                }
-            }
-        });
-
-        mBackgroundCount.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (mBackgroundCount.getText().equals("start Background thread +1/2s")) {
-                    mBackgroundCount.setText("stop Background thread +1/2s");
-
-                    Log.d(TAG, "onClick: background thread start to count.");
-                    // TODO example 2: start to count
-                    backgroundHandler.postDelayed(backgroundThreadRunner, 2000);
-                } else {
-                    mBackgroundCount.setText("start Background thread +1/2s");
-                    // TODO example 2: stop to count
-                    backgroundHandler.removeCallbacks(backgroundThreadRunner);
-                }
-
-            }
-        });
-
-
+        // TODO example 3: background MyHandlerThread
+        myHandlerThread = new MyHandlerThread("MyHandlerThread");
+        myHandlerThread.start();
+        myHandler = new Handler(myHandlerThread.getLooper());
+        Log.d(TAG, "onCreate: myHandlerThread.getLooper() = " + myHandlerThread.getLooper());
+        myHandler.postDelayed(myHandlerThreadRunner, 3000);
     }
 
     @Override
     public void onPause() {
+
         uiHandler.removeCallbacks(mainThreadRunner);
-        // remove all runnable posted on this handler.
         uiHandler.removeCallbacksAndMessages(null);
 
         backgroundHandler.removeCallbacks(backgroundThreadRunner);
+
+        myHandler.removeCallbacks(myHandlerThreadRunner);
 
         super.onPause();
     }

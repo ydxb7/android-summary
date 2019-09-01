@@ -239,10 +239,42 @@ a <code>Message</code> object containing a bundle of data that will be
 processed by the Handler's <code>handleMessage</code> method (requiring that
 you implement a subclass of Handler).
 
-<p>When posting or sending to a Handler, you can either
-allow the item to be processed as soon as the message queue is ready
-to do so, or specify a delay before it gets processed or absolute time for
-it to be processed.  The latter two allow you to implement timeouts,
-ticks, and other timing-based behavior.
+
 Handler是Android中引入的一种让开发者参与处理线程中消息循环的机制。每个Hanlder都关联了一个线程，每个线程内部都维护了一个消息队列MessageQueue，这样Handler实际上也就关联了一个消息队列。可以通过Handler将Message和Runnable对象发送到该Handler所关联线程的MessageQueue（消息队列）中，然后该消息队列一直在循环拿出一个Message，对其进行处理，处理完之后拿出下一个Message，继续进行处理，周而复始。当创建一个Handler的时候，该Handler就绑定了当前创建Hanlder的线程。从这时起，该Hanlder就可以发送Message和Runnable对象到该Handler对应的消息队列中，当从MessageQueue取出某个Message时，会让Handler对其进行处理。
+
+## Looper
+Class used to run a message loop for a thread.  
+除了UI线程/主线程以外，普通的线程(先不提HandlerThread)是不自带Looper的。想要通过UI线程与子线程通信需要在子线程内自己实现一个Looper。开启Looper分三步走：
+
+1. 判定是否已有Looper并Looper.prepare()
+2. 做一些准备工作(如暴露handler等)
+3. 调用Looper.loop()，线程进入阻塞态
+
+<p>a typical example of the implementation of a Looper thread,
+using the separation of `prepare` and `loop` to create an
+initial Handler to communicate with the Looper.
+
+<pre>
+class LooperThread extends Thread {
+    public Handler mHandler;
+
+    public void run() {
+        Looper.prepare(); // create a messageQueue and set thread to currentThread, 每个thread只能跑一次
+
+        mHandler = new Handler() {
+            public void handleMessage(Message msg) {
+                // process incoming messages here
+            }
+        };
+
+        Looper.loop();
+    }
+}</pre>
+
+由于每一个线程内最多只可以有一个`Looper`，所以一定要在`Looper.prepare()`之前做好判定，否则会抛出`java.lang.RuntimeException: Only one Looper may be created per thread`。为了获取`Looper`的信息可以使用两个方法：
+
+* `Looper.myLooper()`
+* `Looper.getMainLooper()`
+
+`Looper.myLooper()`获取当前线程绑定的`Looper`，如果没有返回`null`。`Looper.getMainLooper()`返回主线程的`Looper`,这样就可以方便的与主线程通信。注意：在`Thread`的构造函数中调用`Looper.myLooper`只会得到主线程的`Looper`，因为此时新线程还未构造好
 
