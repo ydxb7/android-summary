@@ -9,67 +9,119 @@
         android:id="@+id/tv_ui_number"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="0"
-        android:layout_marginStart="250dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
+        android:layout_toRightOf="@id/tv_ui_count"
+        android:text="0"
         android:textSize="20sp" />
 
     <TextView
         android:id="@+id/tv_ui_count"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@color/light_blue"
-        android:layout_marginStart="50dp"
+        android:layout_marginStart="30dp"
         android:layout_marginTop="20dp"
-        android:textColor="@color/black"
-        android:text="start UI thread +1/s"
+        android:background="@color/light_blue"
         android:padding="4dp"
+        android:text="postDelayed: UI thread +1/s"
+        android:textColor="@color/black"
         android:textSize="15sp" />
 
     <TextView
         android:id="@+id/tv_background_number"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="0"
-        android:layout_marginStart="300dp"
         android:layout_below="@id/tv_ui_number"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
+        android:layout_toRightOf="@id/tv_background_count"
+        android:text="0"
         android:textSize="20sp" />
 
     <TextView
         android:id="@+id/tv_background_count"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@color/light_blue"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="20dp"
-        android:textColor="@color/black"
         android:layout_below="@id/tv_ui_number"
-        android:text="start Background thread +1/2s"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/light_blue"
         android:padding="4dp"
+        android:text="postDelayed: Background thread +1/2s"
+        android:textColor="@color/black"
         android:textSize="15sp" />
 
     <TextView
         android:id="@+id/tv_MyHandlerThread_number"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="0"
-        android:layout_marginStart="300dp"
         android:layout_below="@id/tv_background_number"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
+        android:layout_toRightOf="@id/tv_MyHandlerThread_count"
+        android:text="0"
         android:textSize="20sp" />
 
     <TextView
         android:id="@+id/tv_MyHandlerThread_count"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@color/light_blue"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="20dp"
-        android:textColor="@color/black"
         android:layout_below="@id/tv_background_number"
-        android:text="start MyHandlerThread +1/3s"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/light_blue"
         android:padding="4dp"
+        android:text="postDelayed: MyHandlerThread +1/3s"
+        android:textColor="@color/black"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/tv_ui_message_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_MyHandlerThread_count"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@id/tv_ui_message1"
+        android:text="0"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tv_ui_message1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_MyHandlerThread_count"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/light_blue"
+        android:padding="4dp"
+        android:text="Message: MyHandlerThread +1/s"
+        android:textColor="@color/black"
+        android:textSize="15sp" />
+
+
+    <TextView
+        android:id="@+id/tv_HandlerThread_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_ui_message1"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@id/tv_ui_message1"
+        android:text="0"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tv_HandlerThread_message1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_ui_message1"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/light_blue"
+        android:padding="4dp"
+        android:text="Message: HandlerThread +1/2s"
+        android:textColor="@color/black"
         android:textSize="15sp" />
 
 
