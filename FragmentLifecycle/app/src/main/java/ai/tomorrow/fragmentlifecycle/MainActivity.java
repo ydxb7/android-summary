@@ -13,29 +13,11 @@ import android.widget.FrameLayout;
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";
 
-    private FrameLayout frameLayout;
-    private Button btn;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         Log.d(TAG, "onCreate.");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-//        frameLayout = findViewById(R.id.container);
-//        btn = findViewById(R.id.btn1);
-//
-//        btn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Log.d(TAG, "onClick.");
-//                Fragment fragment = new MyFragment();
-//                FragmentTransaction transaction = MainActivity.this.getSupportFragmentManager().beginTransaction();
-//                transaction.replace(R.id.container, fragment);
-//                transaction.addToBackStack("Fragment");
-//                transaction.commit();
-//            }
-//        });
     }
 
     @Override

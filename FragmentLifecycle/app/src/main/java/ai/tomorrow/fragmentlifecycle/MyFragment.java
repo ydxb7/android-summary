@@ -59,4 +59,10 @@ public class MyFragment extends Fragment {
         super.onAttach(context);
         Log.d(TAG, "onAttach.");
     }
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
+        Log.d(TAG, "onDetach.");
+    }
 }
