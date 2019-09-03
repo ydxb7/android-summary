@@ -24,14 +24,16 @@ import androidx.fragment.app.ListFragment;
  * This sample provides a different layout (and activity flow) when run in
  * landscape.
  */
-public class FragmentLayout extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity {
+
+    private static final String TAG = "MainActivity";
 
     //BEGIN_INCLUDE(main)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.fragment_layout);
+        setContentView(R.layout.activity_main);
     }
 //END_INCLUDE(main)
 
