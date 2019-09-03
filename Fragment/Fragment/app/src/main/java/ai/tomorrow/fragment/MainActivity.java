@@ -1,8 +1,10 @@
 package ai.tomorrow.fragment;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,6 +14,7 @@ import android.widget.ListView;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
@@ -26,15 +29,53 @@ import androidx.fragment.app.ListFragment;
  */
 public class MainActivity extends AppCompatActivity {
 
-    private static final String TAG = "MainActivity";
+    private static final String TAG_MAIN = "MainActivity";
 
     //BEGIN_INCLUDE(main)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Log.w(TAG_MAIN, "onCreate.");
 
         setContentView(R.layout.activity_main);
     }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log.w(TAG_MAIN, "onStart.");
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.w(TAG_MAIN, "onResume.");
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.w(TAG_MAIN, "onPause.");
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.w(TAG_MAIN, "onStop.");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.w(TAG_MAIN, "onDestroy.");
+    }
+
+    @Override
+    public void onDetachedFromWindow() {
+        super.onDetachedFromWindow();
+        Log.w(TAG_MAIN, "onDetachedFromWindow.");
+    }
+
 //END_INCLUDE(main)
 
     /**
@@ -44,9 +85,12 @@ public class MainActivity extends AppCompatActivity {
 //BEGIN_INCLUDE(details_activity)
     public static class DetailsActivity extends FragmentActivity {
 
+        private static final String TAG = "DetailsActivity";
+
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
+            Log.w(TAG, "onCreate.");
 
             if (getResources().getConfiguration().orientation
                     == Configuration.ORIENTATION_LANDSCAPE) {
@@ -62,6 +106,42 @@ public class MainActivity extends AppCompatActivity {
                 details.setArguments(getIntent().getExtras());
                 getSupportFragmentManager().beginTransaction().add(android.R.id.content, details).commit();
             }
+        }
+
+        @Override
+        protected void onStart() {
+            super.onStart();
+            Log.w(TAG, "onStart.");
+        }
+
+        @Override
+        protected void onResume() {
+            super.onResume();
+            Log.w(TAG, "onResume.");
+        }
+
+        @Override
+        protected void onPause() {
+            super.onPause();
+            Log.w(TAG, "onPause.");
+        }
+
+        @Override
+        protected void onStop() {
+            super.onStop();
+            Log.w(TAG, "onStop.");
+        }
+
+        @Override
+        protected void onDestroy() {
+            super.onDestroy();
+            Log.w(TAG, "onDestroy.");
+        }
+
+        @Override
+        public void onDetachedFromWindow() {
+            super.onDetachedFromWindow();
+            Log.w(TAG, "onDetachedFromWindow.");
         }
     }
 //END_INCLUDE(details_activity)
@@ -136,11 +216,9 @@ public class MainActivity extends AppCompatActivity {
                     // Execute a transaction, replacing any existing fragment
                     // with this one inside the frame.
                     FragmentTransaction ft = getFragmentManager().beginTransaction();
-                    if (index == 0) {
-                        ft.replace(R.id.details, details);
-                    } else {
-                        ft.replace(R.id.details, details);
-                    }
+
+                    ft.replace(R.id.details, details);
+
                     ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
                     ft.commit();
                 }
@@ -163,6 +241,9 @@ public class MainActivity extends AppCompatActivity {
      */
 //BEGIN_INCLUDE(details)
     public static class DetailsFragment extends Fragment {
+
+        private static final String TAG = "DetailsFragment";
+
         /**
          * Create a new instance of DetailsFragment, initialized to
          * show the text at 'index'.
@@ -185,6 +266,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
+            Log.w(TAG, "onCreateView.");
             if (container == null) {
                 // We have different layouts, and in one of them this
                 // fragment's containing frame doesn't exist. The fragment
@@ -204,6 +286,60 @@ public class MainActivity extends AppCompatActivity {
             scroller.addView(text);
             text.setText(Shakespeare.DIALOGUE[getShownIndex()]);
             return scroller;
+        }
+
+        @Override
+        public void onCreate(@Nullable Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            Log.w(TAG, "onCreate.");
+        }
+
+        @Override
+        public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+            super.onActivityCreated(savedInstanceState);
+            Log.w(TAG, "onActivityCreated.");
+        }
+
+        @Override
+        public void onStart() {
+            super.onStart();
+            Log.w(TAG, "onStart.");
+        }
+
+        @Override
+        public void onResume() {
+            super.onResume();
+            Log.w(TAG, "onResume.");
+        }
+
+        @Override
+        public void onPause() {
+            super.onPause();
+            Log.w(TAG, "onPause.");
+        }
+
+        @Override
+        public void onStop() {
+            super.onStop();
+            Log.w(TAG, "onStop.");
+        }
+
+        @Override
+        public void onDestroy() {
+            super.onDestroy();
+            Log.w(TAG, "onDestroy.");
+        }
+
+        @Override
+        public void onAttach(Context context) {
+            super.onAttach(context);
+            Log.w(TAG, "onAttach.");
+        }
+
+        @Override
+        public void onDetach() {
+            super.onDetach();
+            Log.w(TAG, "onDetach.");
         }
     }
 //END_INCLUDE(details)
