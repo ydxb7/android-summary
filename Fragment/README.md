@@ -66,6 +66,9 @@ Fragment 所在 Activity 的生命周期会直接影响Fragment的生命周期�
 
 一旦 Activity 达到已恢复状态，您便可随意向 Activity 添加Fragment和移除其中的Fragment。因此，**只有当 Activity 处于已恢复状态时，片段的生命周期才能独立变化。**
 
+## Example
+其中的 Activity 使用两个Fragment来创建一个双窗格布局。下面的 Activity 包括两个Fragment：一个用于显示莎士比亚戏剧标题列表，另一个用于在从列表中选定戏剧时显示其摘要。此外，它还展示了如何根据屏幕配置提供不同的Fragment配置。
 
+![image](show_fragment.gif)
 
 
