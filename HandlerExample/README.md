@@ -1,4 +1,6 @@
-# *Handler, Thread, HandlerThread*
+# Handler, Thread, HandlerThread
+
+![image](show_handlerExample.gif)
 
 ## Thread
 ### Create Thread
