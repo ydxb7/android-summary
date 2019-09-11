@@ -13,12 +13,8 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import java.io.BufferedInputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -37,7 +33,8 @@ public class MainActivity extends AppCompatActivity {
 
     private TextView textView;
 
-    private Button button;
+    private Button download_button;
+    private Button cancel_button;
 
     private final String url1 = "https://static.photocdn.pt/images/articles/2018/03/09/articles/2017_8/landscape_photography.jpg";
     private final String url2 = "https://static.photocdn.pt/images/articles/2018/03/09/articles/2017_8/landscape_photography.jpg";
@@ -57,11 +54,10 @@ public class MainActivity extends AppCompatActivity {
         imageView3 = findViewById(R.id.demo_image3);
         imageView4 = findViewById(R.id.demo_image4);
         textView = findViewById(R.id.demo_showProgress);
-        button = findViewById(R.id.demo_button);
+        download_button = findViewById(R.id.demo_button);
+        cancel_button = findViewById(R.id.cancel_button);
 
-//        myTask = new MyTask();
-
-        button.setOnClickListener(new View.OnClickListener() {
+        download_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Log.d(TAG, "onClick: start to download.");
@@ -69,9 +65,23 @@ public class MainActivity extends AppCompatActivity {
                 imageView2.setImageBitmap(null);
                 imageView3.setImageBitmap(null);
                 imageView4.setImageBitmap(null);
-                new MyTask().execute(url1, url2, url3, url4);
+                myTask = new MyTask();
+                myTask.execute(url1, url2, url3, url4);
             }
         });
+
+        cancel_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d(TAG, "onClick: cancel download.");
+                if(myTask != null){
+                    myTask.cancel(true);
+                    textView.setText("Task canceled.");
+                    progressBar.setVisibility(View.GONE);
+                }
+            }
+        });
+
     }
 
     private class MyTask extends AsyncTask<String, String, List<Bitmap>> {
@@ -89,7 +99,13 @@ public class MainActivity extends AppCompatActivity {
             List<Bitmap> bitmaps = new ArrayList<>();
 
             for (int i = 0; i < strings.length; i++){
+                Log.d(TAG, "doInBackground: downloading image: " + i);
                 publishProgress("downloading image: " + (i + 1));
+                if(isCancelled()){
+                    Log.d(TAG, "doInBackground: cancel task.");
+                    break;
+                }
+
                 bitmaps.add(getBitmapFromUrl(strings[i]));
             }
 
@@ -142,7 +158,9 @@ public class MainActivity extends AppCompatActivity {
         super.onStop();
         Log.d(TAG, "onStop: cancel the task.");
 
-
+        if(myTask != null){
+            myTask.cancel(true);
+        }
 
     }
 }
