@@ -5,9 +5,15 @@ import android.util.Log;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import ai.tomorrow.base.NetManager;
+
 public abstract class BaseActivity extends AppCompatActivity {
 
     private static final String TAG = "BaseActivity";
+
+    public NetManager getNetManager() {
+        return  ((MyApplication)getApplication()).getNetManager();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

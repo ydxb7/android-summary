@@ -50,6 +50,7 @@ public class NetManager {
             callback.onResponse(res);
 
         } catch (Exception e) {
+            Log.d(TAG, "run: e: " + e.getMessage());
             callback.onError(e.getMessage());
         } finally {
             if (response != null) {
