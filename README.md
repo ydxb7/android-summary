@@ -8,3 +8,6 @@ Some examples of:
   
 * #### Fragment
   ![image](Fragment/show_fragment.gif)
+  
+* #### AsyncTask
+  ![image](AsyncTask/show_asyncTask.gif)
