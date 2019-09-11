@@ -19,6 +19,8 @@ import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
@@ -28,13 +30,20 @@ public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";
     private ProgressBar progressBar;
 
-    private ImageView imageView;
+    private ImageView imageView1;
+    private ImageView imageView2;
+    private ImageView imageView3;
+    private ImageView imageView4;
 
     private TextView textView;
 
     private Button button;
 
-    private final String url = "https://static.photocdn.pt/images/articles/2018/03/09/articles/2017_8/landscape_photography.jpg";
+    private final String url1 = "https://static.photocdn.pt/images/articles/2018/03/09/articles/2017_8/landscape_photography.jpg";
+    private final String url2 = "https://static.photocdn.pt/images/articles/2018/03/09/articles/2017_8/landscape_photography.jpg";
+    private final String url3 = "https://static.photocdn.pt/images/articles/2018/03/09/articles/2017_8/landscape_photography.jpg";
+    private final String url4 = "https://static.photocdn.pt/images/articles/2018/03/09/articles/2017_8/landscape_photography.jpg";
+    private MyTask myTask;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,19 +52,29 @@ public class MainActivity extends AppCompatActivity {
 
         progressBar = findViewById(R.id.demo_progressBar);
         progressBar.setVisibility(View.INVISIBLE);
-        imageView = findViewById(R.id.demo_image);
+        imageView1 = findViewById(R.id.demo_image1);
+        imageView2 = findViewById(R.id.demo_image2);
+        imageView3 = findViewById(R.id.demo_image3);
+        imageView4 = findViewById(R.id.demo_image4);
         textView = findViewById(R.id.demo_showProgress);
         button = findViewById(R.id.demo_button);
+
+//        myTask = new MyTask();
+
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                imageView.setImageBitmap(null);
-                new MyTask().execute(url);
+                Log.d(TAG, "onClick: start to download.");
+                imageView1.setImageBitmap(null);
+                imageView2.setImageBitmap(null);
+                imageView3.setImageBitmap(null);
+                imageView4.setImageBitmap(null);
+                new MyTask().execute(url1, url2, url3, url4);
             }
         });
     }
 
-    private class MyTask extends AsyncTask<String, String, Bitmap> {
+    private class MyTask extends AsyncTask<String, String, List<Bitmap>> {
 
         @Override
         protected void onPreExecute() {
@@ -65,22 +84,34 @@ public class MainActivity extends AppCompatActivity {
         }
 
         @Override
-        protected Bitmap doInBackground(String... strings) {
-            publishProgress("downloading image...");
-            return getBitmapFromUrl(strings[0]);
+        protected List<Bitmap> doInBackground(String... strings) {
+
+            List<Bitmap> bitmaps = new ArrayList<>();
+
+            for (int i = 0; i < strings.length; i++){
+                publishProgress("downloading image: " + (i + 1));
+                bitmaps.add(getBitmapFromUrl(strings[i]));
+            }
+
+            return bitmaps;
         }
 
         @Override
         protected void onProgressUpdate(String... values) {
             super.onProgressUpdate(values);
-            Log.d(TAG, "onProgressUpdate: values[0] = " + values[0]);
+            Log.d(TAG, "onProgressUpdate: " + values);
             textView.setText(values[0]);
         }
 
         @Override
-        protected void onPostExecute(Bitmap bitmap) {
-            super.onPostExecute(bitmap);
-            imageView.setImageBitmap(bitmap);
+        protected void onPostExecute(List<Bitmap> bitmaps) {
+            super.onPostExecute(bitmaps);
+
+            imageView1.setImageBitmap(bitmaps.get(0));
+            imageView2.setImageBitmap(bitmaps.get(1));
+            imageView3.setImageBitmap(bitmaps.get(2));
+            imageView4.setImageBitmap(bitmaps.get(3));
+
             textView.setText("Done");
             progressBar.setVisibility(View.INVISIBLE);
         }
@@ -104,5 +135,14 @@ public class MainActivity extends AppCompatActivity {
             Log.d(TAG, "getBitmapFromUrl: e " + e.getMessage());
         }
         return null;
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.d(TAG, "onStop: cancel the task.");
+
+
+
     }
 }
