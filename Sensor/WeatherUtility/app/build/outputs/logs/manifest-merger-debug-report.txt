@@ -1,0 +1,251 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/yini/AndroidStudioProjects/android-summary/Sensor/WeatherUtility/app/src/main/AndroidManifest.xml:2:1-71:12
+INJECTED from /Users/yini/AndroidStudioProjects/android-summary/Sensor/WeatherUtility/app/src/main/AndroidManifest.xml:2:1-71:12
+INJECTED from /Users/yini/AndroidStudioProjects/android-summary/Sensor/WeatherUtility/app/src/main/AndroidManifest.xml:2:1-71:12
+INJECTED from /Users/yini/AndroidStudioProjects/android-summary/Sensor/WeatherUtility/app/src/main/AndroidManifest.xml:2:1-71:12
+MERGED from [androidx.appcompat:appcompat:1.1.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/18b8d4403e82d380add3f39036f1a108/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /Users/yini/.gradle/caches/transforms-2/files-2.1/d618ce179b6a01f593e667af529ef718/AndroidManifest.xml:2:1-11:12
+MERGED from [com.google.android.gms:play-services-plus:17.0.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/47b7f18c6a47fac184c430772bc651ba/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-location:17.0.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/862aab68b2dd029aa555173beab23144/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-audience:17.0.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/fce32c5b5b296e134fbcf13dd1e5bc32/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-base:17.0.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/12257247a013de0f0b116147c2b8bc88/AndroidManifest.xml:17:1-29:12
+MERGED from [com.google.android.gms:play-services-places-placereport:17.0.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/44ffbd0200e1407729748ab4293d397e/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/ed30a9b44ced8ddcc54029d0aaa17695/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/4eb38275540aaa6f567d70291bb86ae0/AndroidManifest.xml:17:1-28:12
+MERGED from [androidx.fragment:fragment:1.1.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/d21f31bf60da6ff452303b9f7e2d0596/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.appcompat:appcompat-resources:1.1.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/fe49e56c63be13e495fb4bed8a179b09/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/a259da165a7f02ed648af753d8139875/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/81062a6acbd8c603c69b4340ad8435fc/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/92de344bc520e38a36327d8649c4403c/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.activity:activity:1.0.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/f52e0f984c0a7cc7d50a9c4aff0ee67e/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/2c9b434c17e4c85207d22644e5ecde64/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/786c0ca5ba445dad280f879f51e4e3cf/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.customview:customview:1.0.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/b24bd000b4668a37ca3516d7b612d937/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.1.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/573b57aed354e8743418a46bdbbab2ee/AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/3c3205e77ea1cdadd058d5f89a74f409/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/f122c9d578443aeb552e300f12b6b2cd/AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/abb6490cd35a98d512032c201f9aa6f0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/150d1f5d97d1e73dedce19e1a1b8ce9e/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.savedstate:savedstate:1.0.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/1702f9cffcecd6399762d5e7e2010e20/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/0478df5245db2470e30bb55782deba60/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/22c53a010b9b5dc77174e802328f7916/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/85e14a925bbf4e90e4bcfbf64c9d99e5/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/3bbd7300b7c4e81e7bc99b808e03a800/AndroidManifest.xml:17:1-22:12
+INJECTED from /Users/yini/AndroidStudioProjects/android-summary/Sensor/WeatherUtility/app/src/main/AndroidManifest.xml:2:1-71:12
+INJECTED from /Users/yini/AndroidStudioProjects/android-summary/Sensor/WeatherUtility/app/src/main/AndroidManifest.xml:2:1-71:12
+INJECTED from /Users/yini/AndroidStudioProjects/android-summary/Sensor/WeatherUtility/app/src/main/AndroidManifest.xml:2:1-71:12
+	package
+		ADDED from /Users/yini/AndroidStudioProjects/android-summary/Sensor/WeatherUtility/app/src/main/AndroidManifest.xml:3:5-33
+		INJECTED from /Users/yini/AndroidStudioProjects/android-summary/Sensor/WeatherUtility/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/yini/AndroidStudioProjects/android-summary/Sensor/WeatherUtility/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/yini/AndroidStudioProjects/android-summary/Sensor/WeatherUtility/app/src/main/AndroidManifest.xml
+		ADDED from /Users/yini/AndroidStudioProjects/android-summary/Sensor/WeatherUtility/app/src/main/AndroidManifest.xml:2:1-71:12
+		INJECTED from /Users/yini/AndroidStudioProjects/android-summary/Sensor/WeatherUtility/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /Users/yini/AndroidStudioProjects/android-summary/Sensor/WeatherUtility/app/src/main/AndroidManifest.xml
+		ADDED from /Users/yini/AndroidStudioProjects/android-summary/Sensor/WeatherUtility/app/src/main/AndroidManifest.xml:2:1-71:12
+		INJECTED from /Users/yini/AndroidStudioProjects/android-summary/Sensor/WeatherUtility/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/yini/AndroidStudioProjects/android-summary/Sensor/WeatherUtility/app/src/main/AndroidManifest.xml:2:11-69
+uses-permission#android.permission.INTERNET
+ADDED from /Users/yini/AndroidStudioProjects/android-summary/Sensor/WeatherUtility/app/src/main/AndroidManifest.xml:5:5-67
+	android:name
+		ADDED from /Users/yini/AndroidStudioProjects/android-summary/Sensor/WeatherUtility/app/src/main/AndroidManifest.xml:5:22-64
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from /Users/yini/AndroidStudioProjects/android-summary/Sensor/WeatherUtility/app/src/main/AndroidManifest.xml:6:5-79
+	android:name
+		ADDED from /Users/yini/AndroidStudioProjects/android-summary/Sensor/WeatherUtility/app/src/main/AndroidManifest.xml:6:22-76
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from /Users/yini/AndroidStudioProjects/android-summary/Sensor/WeatherUtility/app/src/main/AndroidManifest.xml:7:5-81
+	android:name
+		ADDED from /Users/yini/AndroidStudioProjects/android-summary/Sensor/WeatherUtility/app/src/main/AndroidManifest.xml:7:22-78
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from /Users/yini/AndroidStudioProjects/android-summary/Sensor/WeatherUtility/app/src/main/AndroidManifest.xml:8:5-79
+	android:name
+		ADDED from /Users/yini/AndroidStudioProjects/android-summary/Sensor/WeatherUtility/app/src/main/AndroidManifest.xml:8:22-76
+application
+ADDED from /Users/yini/AndroidStudioProjects/android-summary/Sensor/WeatherUtility/app/src/main/AndroidManifest.xml:10:5-69:19
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /Users/yini/.gradle/caches/transforms-2/files-2.1/d618ce179b6a01f593e667af529ef718/AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /Users/yini/.gradle/caches/transforms-2/files-2.1/d618ce179b6a01f593e667af529ef718/AndroidManifest.xml:9:5-20
+MERGED from [com.google.android.gms:play-services-plus:17.0.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/47b7f18c6a47fac184c430772bc651ba/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-plus:17.0.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/47b7f18c6a47fac184c430772bc651ba/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-location:17.0.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/862aab68b2dd029aa555173beab23144/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-location:17.0.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/862aab68b2dd029aa555173beab23144/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-audience:17.0.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/fce32c5b5b296e134fbcf13dd1e5bc32/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-audience:17.0.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/fce32c5b5b296e134fbcf13dd1e5bc32/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-base:17.0.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/12257247a013de0f0b116147c2b8bc88/AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-base:17.0.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/12257247a013de0f0b116147c2b8bc88/AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-places-placereport:17.0.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/44ffbd0200e1407729748ab4293d397e/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-places-placereport:17.0.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/44ffbd0200e1407729748ab4293d397e/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/ed30a9b44ced8ddcc54029d0aaa17695/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/ed30a9b44ced8ddcc54029d0aaa17695/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/4eb38275540aaa6f567d70291bb86ae0/AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/4eb38275540aaa6f567d70291bb86ae0/AndroidManifest.xml:22:5-26:19
+MERGED from [androidx.core:core:1.1.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/573b57aed354e8743418a46bdbbab2ee/AndroidManifest.xml:24:5-89
+MERGED from [androidx.core:core:1.1.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/573b57aed354e8743418a46bdbbab2ee/AndroidManifest.xml:24:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/f122c9d578443aeb552e300f12b6b2cd/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/f122c9d578443aeb552e300f12b6b2cd/AndroidManifest.xml:24:5-25:19
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.1.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/573b57aed354e8743418a46bdbbab2ee/AndroidManifest.xml:24:18-86
+	android:supportsRtl
+		ADDED from /Users/yini/AndroidStudioProjects/android-summary/Sensor/WeatherUtility/app/src/main/AndroidManifest.xml:14:9-35
+	android:label
+		ADDED from /Users/yini/AndroidStudioProjects/android-summary/Sensor/WeatherUtility/app/src/main/AndroidManifest.xml:13:9-41
+	android:icon
+		ADDED from /Users/yini/AndroidStudioProjects/android-summary/Sensor/WeatherUtility/app/src/main/AndroidManifest.xml:12:9-45
+	android:allowBackup
+		ADDED from /Users/yini/AndroidStudioProjects/android-summary/Sensor/WeatherUtility/app/src/main/AndroidManifest.xml:11:9-35
+	android:theme
+		ADDED from /Users/yini/AndroidStudioProjects/android-summary/Sensor/WeatherUtility/app/src/main/AndroidManifest.xml:15:9-40
+activity#com.weatherutility.MainActivity
+ADDED from /Users/yini/AndroidStudioProjects/android-summary/Sensor/WeatherUtility/app/src/main/AndroidManifest.xml:18:9-26:20
+	android:screenOrientation
+		ADDED from /Users/yini/AndroidStudioProjects/android-summary/Sensor/WeatherUtility/app/src/main/AndroidManifest.xml:20:13-49
+	android:theme
+		ADDED from /Users/yini/AndroidStudioProjects/android-summary/Sensor/WeatherUtility/app/src/main/AndroidManifest.xml:21:13-66
+	android:name
+		ADDED from /Users/yini/AndroidStudioProjects/android-summary/Sensor/WeatherUtility/app/src/main/AndroidManifest.xml:19:13-41
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /Users/yini/AndroidStudioProjects/android-summary/Sensor/WeatherUtility/app/src/main/AndroidManifest.xml:22:13-25:29
+action#android.intent.action.MAIN
+ADDED from /Users/yini/AndroidStudioProjects/android-summary/Sensor/WeatherUtility/app/src/main/AndroidManifest.xml:23:17-69
+	android:name
+		ADDED from /Users/yini/AndroidStudioProjects/android-summary/Sensor/WeatherUtility/app/src/main/AndroidManifest.xml:23:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/yini/AndroidStudioProjects/android-summary/Sensor/WeatherUtility/app/src/main/AndroidManifest.xml:24:17-77
+	android:name
+		ADDED from /Users/yini/AndroidStudioProjects/android-summary/Sensor/WeatherUtility/app/src/main/AndroidManifest.xml:24:27-74
+activity#com.weatherutility.TemperatureActivity
+ADDED from /Users/yini/AndroidStudioProjects/android-summary/Sensor/WeatherUtility/app/src/main/AndroidManifest.xml:29:9-36:21
+	android:screenOrientation
+		ADDED from /Users/yini/AndroidStudioProjects/android-summary/Sensor/WeatherUtility/app/src/main/AndroidManifest.xml:30:12-48
+	android:parentActivityName
+		ADDED from /Users/yini/AndroidStudioProjects/android-summary/Sensor/WeatherUtility/app/src/main/AndroidManifest.xml:31:12-54
+	android:theme
+		ADDED from /Users/yini/AndroidStudioProjects/android-summary/Sensor/WeatherUtility/app/src/main/AndroidManifest.xml:32:12-65
+	android:name
+		ADDED from /Users/yini/AndroidStudioProjects/android-summary/Sensor/WeatherUtility/app/src/main/AndroidManifest.xml:29:19-54
+meta-data#android.support.PARENT_ACTIVITY
+ADDED from /Users/yini/AndroidStudioProjects/android-summary/Sensor/WeatherUtility/app/src/main/AndroidManifest.xml:33:14-35:45
+	android:value
+		ADDED from /Users/yini/AndroidStudioProjects/android-summary/Sensor/WeatherUtility/app/src/main/AndroidManifest.xml:35:13-42
+	android:name
+		ADDED from /Users/yini/AndroidStudioProjects/android-summary/Sensor/WeatherUtility/app/src/main/AndroidManifest.xml:34:13-59
+activity#com.weatherutility.PressureAltitudeActivity
+ADDED from /Users/yini/AndroidStudioProjects/android-summary/Sensor/WeatherUtility/app/src/main/AndroidManifest.xml:38:10-45:21
+	android:screenOrientation
+		ADDED from /Users/yini/AndroidStudioProjects/android-summary/Sensor/WeatherUtility/app/src/main/AndroidManifest.xml:39:12-48
+	android:parentActivityName
+		ADDED from /Users/yini/AndroidStudioProjects/android-summary/Sensor/WeatherUtility/app/src/main/AndroidManifest.xml:40:12-54
+	android:theme
+		ADDED from /Users/yini/AndroidStudioProjects/android-summary/Sensor/WeatherUtility/app/src/main/AndroidManifest.xml:41:12-65
+	android:name
+		ADDED from /Users/yini/AndroidStudioProjects/android-summary/Sensor/WeatherUtility/app/src/main/AndroidManifest.xml:38:20-60
+activity#com.weatherutility.HumidityActivity
+ADDED from /Users/yini/AndroidStudioProjects/android-summary/Sensor/WeatherUtility/app/src/main/AndroidManifest.xml:47:10-54:21
+	android:screenOrientation
+		ADDED from /Users/yini/AndroidStudioProjects/android-summary/Sensor/WeatherUtility/app/src/main/AndroidManifest.xml:48:12-48
+	android:parentActivityName
+		ADDED from /Users/yini/AndroidStudioProjects/android-summary/Sensor/WeatherUtility/app/src/main/AndroidManifest.xml:49:12-54
+	android:theme
+		ADDED from /Users/yini/AndroidStudioProjects/android-summary/Sensor/WeatherUtility/app/src/main/AndroidManifest.xml:50:12-65
+	android:name
+		ADDED from /Users/yini/AndroidStudioProjects/android-summary/Sensor/WeatherUtility/app/src/main/AndroidManifest.xml:47:20-52
+activity#com.weatherutility.CompareSensorActivity
+ADDED from /Users/yini/AndroidStudioProjects/android-summary/Sensor/WeatherUtility/app/src/main/AndroidManifest.xml:56:9-63:20
+	android:screenOrientation
+		ADDED from /Users/yini/AndroidStudioProjects/android-summary/Sensor/WeatherUtility/app/src/main/AndroidManifest.xml:57:19-55
+	android:parentActivityName
+		ADDED from /Users/yini/AndroidStudioProjects/android-summary/Sensor/WeatherUtility/app/src/main/AndroidManifest.xml:58:19-61
+	android:theme
+		ADDED from /Users/yini/AndroidStudioProjects/android-summary/Sensor/WeatherUtility/app/src/main/AndroidManifest.xml:59:19-72
+	android:name
+		ADDED from /Users/yini/AndroidStudioProjects/android-summary/Sensor/WeatherUtility/app/src/main/AndroidManifest.xml:56:19-56
+meta-data#com.google.android.gms.version
+ADDED from /Users/yini/AndroidStudioProjects/android-summary/Sensor/WeatherUtility/app/src/main/AndroidManifest.xml:65:11-67:69
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/4eb38275540aaa6f567d70291bb86ae0/AndroidManifest.xml:23:9-25:69
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/4eb38275540aaa6f567d70291bb86ae0/AndroidManifest.xml:23:9-25:69
+	android:value
+		ADDED from /Users/yini/AndroidStudioProjects/android-summary/Sensor/WeatherUtility/app/src/main/AndroidManifest.xml:67:13-66
+	android:name
+		ADDED from /Users/yini/AndroidStudioProjects/android-summary/Sensor/WeatherUtility/app/src/main/AndroidManifest.xml:66:13-58
+uses-sdk
+INJECTED from /Users/yini/AndroidStudioProjects/android-summary/Sensor/WeatherUtility/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/yini/AndroidStudioProjects/android-summary/Sensor/WeatherUtility/app/src/main/AndroidManifest.xml
+INJECTED from /Users/yini/AndroidStudioProjects/android-summary/Sensor/WeatherUtility/app/src/main/AndroidManifest.xml
+MERGED from [androidx.appcompat:appcompat:1.1.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/18b8d4403e82d380add3f39036f1a108/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat:1.1.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/18b8d4403e82d380add3f39036f1a108/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /Users/yini/.gradle/caches/transforms-2/files-2.1/d618ce179b6a01f593e667af529ef718/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /Users/yini/.gradle/caches/transforms-2/files-2.1/d618ce179b6a01f593e667af529ef718/AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.android.gms:play-services-plus:17.0.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/47b7f18c6a47fac184c430772bc651ba/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-plus:17.0.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/47b7f18c6a47fac184c430772bc651ba/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-location:17.0.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/862aab68b2dd029aa555173beab23144/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-location:17.0.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/862aab68b2dd029aa555173beab23144/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-audience:17.0.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/fce32c5b5b296e134fbcf13dd1e5bc32/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-audience:17.0.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/fce32c5b5b296e134fbcf13dd1e5bc32/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:17.0.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/12257247a013de0f0b116147c2b8bc88/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:17.0.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/12257247a013de0f0b116147c2b8bc88/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-places-placereport:17.0.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/44ffbd0200e1407729748ab4293d397e/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-places-placereport:17.0.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/44ffbd0200e1407729748ab4293d397e/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/ed30a9b44ced8ddcc54029d0aaa17695/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/ed30a9b44ced8ddcc54029d0aaa17695/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/4eb38275540aaa6f567d70291bb86ae0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/4eb38275540aaa6f567d70291bb86ae0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.1.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/d21f31bf60da6ff452303b9f7e2d0596/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.1.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/d21f31bf60da6ff452303b9f7e2d0596/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.1.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/fe49e56c63be13e495fb4bed8a179b09/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.1.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/fe49e56c63be13e495fb4bed8a179b09/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/a259da165a7f02ed648af753d8139875/AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/a259da165a7f02ed648af753d8139875/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/81062a6acbd8c603c69b4340ad8435fc/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/81062a6acbd8c603c69b4340ad8435fc/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/92de344bc520e38a36327d8649c4403c/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/92de344bc520e38a36327d8649c4403c/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.0.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/f52e0f984c0a7cc7d50a9c4aff0ee67e/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.0.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/f52e0f984c0a7cc7d50a9c4aff0ee67e/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/2c9b434c17e4c85207d22644e5ecde64/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/2c9b434c17e4c85207d22644e5ecde64/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/786c0ca5ba445dad280f879f51e4e3cf/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/786c0ca5ba445dad280f879f51e4e3cf/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.0.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/b24bd000b4668a37ca3516d7b612d937/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/b24bd000b4668a37ca3516d7b612d937/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.1.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/573b57aed354e8743418a46bdbbab2ee/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.1.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/573b57aed354e8743418a46bdbbab2ee/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/3c3205e77ea1cdadd058d5f89a74f409/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/3c3205e77ea1cdadd058d5f89a74f409/AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/f122c9d578443aeb552e300f12b6b2cd/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/f122c9d578443aeb552e300f12b6b2cd/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/abb6490cd35a98d512032c201f9aa6f0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/abb6490cd35a98d512032c201f9aa6f0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/150d1f5d97d1e73dedce19e1a1b8ce9e/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/150d1f5d97d1e73dedce19e1a1b8ce9e/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.0.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/1702f9cffcecd6399762d5e7e2010e20/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.0.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/1702f9cffcecd6399762d5e7e2010e20/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/0478df5245db2470e30bb55782deba60/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/0478df5245db2470e30bb55782deba60/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/22c53a010b9b5dc77174e802328f7916/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/22c53a010b9b5dc77174e802328f7916/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/85e14a925bbf4e90e4bcfbf64c9d99e5/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/85e14a925bbf4e90e4bcfbf64c9d99e5/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/3bbd7300b7c4e81e7bc99b808e03a800/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/3bbd7300b7c4e81e7bc99b808e03a800/AndroidManifest.xml:20:5-44
+INJECTED from /Users/yini/AndroidStudioProjects/android-summary/Sensor/WeatherUtility/app/src/main/AndroidManifest.xml
+INJECTED from /Users/yini/AndroidStudioProjects/android-summary/Sensor/WeatherUtility/app/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /Users/yini/AndroidStudioProjects/android-summary/Sensor/WeatherUtility/app/src/main/AndroidManifest.xml
+		ADDED from /Users/yini/AndroidStudioProjects/android-summary/Sensor/WeatherUtility/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/yini/AndroidStudioProjects/android-summary/Sensor/WeatherUtility/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/yini/AndroidStudioProjects/android-summary/Sensor/WeatherUtility/app/src/main/AndroidManifest.xml
+		ADDED from /Users/yini/AndroidStudioProjects/android-summary/Sensor/WeatherUtility/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/yini/AndroidStudioProjects/android-summary/Sensor/WeatherUtility/app/src/main/AndroidManifest.xml
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:17.0.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/12257247a013de0f0b116147c2b8bc88/AndroidManifest.xml:23:9-26:75
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:17.0.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/12257247a013de0f0b116147c2b8bc88/AndroidManifest.xml:25:13-37
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:17.0.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/12257247a013de0f0b116147c2b8bc88/AndroidManifest.xml:26:13-72
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:17.0.0] /Users/yini/.gradle/caches/transforms-2/files-2.1/12257247a013de0f0b116147c2b8bc88/AndroidManifest.xml:24:13-79

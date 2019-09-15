@@ -1,0 +1,7 @@
+#Sun Sep 15 08:59:41 PDT 2019
+base.0=/Users/yini/AndroidStudioProjects/android-summary/Sensor/WeatherUtility/app/build/intermediates/dex/debug/mergeExtDexDebug/out
+path.1=classes.dex
+renamed.1=classes2.dex
+path.0=classes.dex
+renamed.0=classes.dex
+base.1=/Users/yini/AndroidStudioProjects/android-summary/Sensor/WeatherUtility/app/build/intermediates/dex/debug/mergeProjectDexDebug/out
