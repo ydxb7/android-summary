@@ -111,5 +111,33 @@ Android 中最典型的 MVC 莫过于 `ListView` 了，要显示的数据为 Mod
 - Android中使用了Activity来充当Controller，但实际上一些UI也是由Activity来控制的，比如进度条等。因此部分视图就会跟Controller捆绑在同一个类了。同时，由于Activity的职责过大，Activity类的代码也会迅速膨胀。
 - MVC还有一个重要的缺陷就是View跟Model是有交互的，没有做到完全的分离，这就会产生耦合。
 
+# MVP
 
+MVP全名是Model－View－Presenter，MVP 是从经典的模式MVC演变而来的。
 
+- Model：模型层，负责处理数据的加载或存储。与MVP中的M一样。
+- View：视图层，负责界面数据的展示，与用户进行交互。与MVP中的V一样。
+- Presenter：负责逻辑业务的处理。跟MVC中的C有所区别。
+
+将Model与View彻底分离。
+解决MVC中Activity职责过多，代码臃肿的问题。
+
+![mvc](mvc.png)
+
+1. View接受用户的请求，然后将请求传递给Presenter。
+2. Presenter进行业务逻辑处理，修改Model。
+3. Presenter通知View去更新界面显示。
+
+**跟MVC不同的地方在于Model不会跟View发生交互，只会跟Presenter交互。**
+
+**MVP的优点**
+
+- View与Model完全分离，我们可以修改视图而不影响模型。
+- 可以更高效地使用模型，因为所有的交互都发生Presenter中。
+- Presenter与View的交互是通过接口来进行的，有利于添加单元测试。
+
+**MVP存在的问题**
+
+- 页面逻辑复杂的话，相应的**接口也会变多**，增加维护成本。可以定义一些基类去分离一些公共的逻辑。
+- 系统内存不足时，系统会回收Activity。一般我们都是用OnSaveInstanceState()去保存状态，用OnRestoreInstanceState()去恢复状态。但是在我们的MVP中，View层是不应该去直接操作Model的，所以这样做不合理，同时也增大了M与V的耦合。解决办法是不要将Activity作为View层，可以把Activity当Presenter来处理。具体实现这里就不分析了，有兴趣的可以研究一下。
+- UI改变的话，比如TextView 替换 EditText，可能导致Presente的一些更新UI的接口也跟着需要更改，存在一定的耦合。
