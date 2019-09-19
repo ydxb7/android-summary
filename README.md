@@ -24,3 +24,13 @@ Some examples of:
 
 * #### Network
   ![image](NetworkRequest/show_network.gif)
+  
+* #### Architecture
+  
+* #### Sensor
+![gif](Sensor/LightSensorExample/show_light_sensor.gif)
+![gif](Sensor/SensorPlay/show_sensor_play.gif)
+![gif](Sensor/WeatherUtility/show_weatherutility.gif)
+![gif](Sensor/CompassShakeFingerPrintUtility/show_hardwaresensor.gif)
+
+* #### Service
