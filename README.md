@@ -34,3 +34,7 @@ Some examples of:
 ![gif](Sensor/CompassShakeFingerPrintUtility/show_hardwaresensor.gif)
 
 * #### Service
+
+* #### RecyclerViewExercise
+  - RecyclerViewExercise1: basic
+  - RecyclerViewExercise2: basic + search item
