@@ -16,8 +16,8 @@ MVC全名是Model View Controller，是模型(model)－视图(view)－控制器(
 ![mvc](mvc.png)
 
 - Model：模型层，负责处理数据的加载或存储。
-- View：视图层，负责界面数据的展示，与用户进行交互。
-- Controller：控制器层，负责逻辑业务的处理。
+- View：视图层，负责界面数据的展示，与用户进行交互。(布局的XML文件)
+- Controller：控制器层，负责逻辑业务的处理。(Activity)
 
 一个模型可以有多个视图，一个视图可以有多个控制器，一个控制器也可以有多个模型。
 Android中一般布局的XML文件就是View层，Activity则充当了Controller的角色。
