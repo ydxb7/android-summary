@@ -122,7 +122,7 @@ MVP全名是Model－View－Presenter，MVP 是从经典的模式MVC演变而来�
 将Model与View彻底分离。
 解决MVC中Activity职责过多，代码臃肿的问题。
 
-![mvc](mvc.png)
+![mvc](mvp.png)
 
 1. View接受用户的请求，然后将请求传递给Presenter。
 2. Presenter进行业务逻辑处理，修改Model。
